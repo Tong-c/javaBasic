@@ -1,4 +1,4 @@
-package com.tong.generic;
+package com.tong.basic.generic;
 
 public class Pair<T> {
 

@@ -1,4 +1,6 @@
-package com.tong.generic;
+package com.tong.basic.generic;
+
+import com.tong.basic.generic.Pair;
 
 public class PairTest2 {
 
