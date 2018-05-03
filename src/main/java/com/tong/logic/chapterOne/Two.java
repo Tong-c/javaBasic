@@ -1,5 +1,6 @@
 package com.tong.logic.chapterOne;
 
+
 public class Two {
     public static void main(String[] args) {
         testSwith();
