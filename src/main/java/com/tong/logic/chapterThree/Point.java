@@ -37,5 +37,9 @@ public class Point {
         return Math.sqrt(Math.pow(x-p.getX(),2)+Math.pow(y-p.getY(),2));
     }
 
-
+    //默認值是Point@76f9aa66,默認實現代碼：getClass().getName() + "@" + Integer.toHexString(hashCode());
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ")";
+    }
 }
