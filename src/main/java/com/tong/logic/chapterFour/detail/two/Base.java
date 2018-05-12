@@ -7,4 +7,8 @@ public class Base {
     public static void staticTest(){
         System.out.println("base static:" + s);
     }
+
+    public void objTest(){
+        System.out.println("base");
+    }
 }
