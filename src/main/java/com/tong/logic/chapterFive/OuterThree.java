@@ -1,5 +1,7 @@
 package com.tong.logic.chapterFive;
 
+import java.util.Arrays;
+
 public class OuterThree {
     private int a = 100;
 
@@ -15,5 +17,6 @@ public class OuterThree {
 
         Inner inner = new Inner();
         inner.innerMethod();
+
     }
 }
