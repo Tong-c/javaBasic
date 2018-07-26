@@ -1,5 +1,6 @@
 package com.tong.logic.chapterEight;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DynamicArray<E> {
@@ -44,10 +45,19 @@ public class DynamicArray<E> {
         return oldValue;
     }
 
-    public void addAll(DynamicArray<E> c){
+
+    public <T extends E> void addAll(DynamicArray<T> c){
         for(int i = 0;i<size;i++){
             add(c.get(i));
         }
     }
+
+    public void copyTo(DynamicArray<? super E> desc){
+        for(int i = 0;i < size;i++){
+            desc.add(get(i));
+        }
+    }
+
+
 
 }

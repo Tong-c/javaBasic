@@ -9,6 +9,8 @@ public class DynamicArrayApp {
         ints.add(100);
         ints.add(34);
 
-//        numbers.addAll(ints);
+        numbers.addAll(ints);
     }
+
+
 }
