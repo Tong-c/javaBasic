@@ -1,4 +1,4 @@
-package com.tong.jvm;
+package com.tong.jvm.chapterTwo;
 
 /**
  * @Description: 《實戰java虛擬機》第二十二頁示例
