@@ -1,4 +1,4 @@
-package com.tong.thinking.chapter07.s02;
+package com.tong.thinking.chapter07.s02.p127;
 
 public class Cleanser {
 
