@@ -1,7 +1,7 @@
 package com.tong.effective.chapterTwo.p2;
 
 /**
- * @Description: Builder Pattern
+ * @Description: 建造者模式（Builder Pattern）
  * @Author: 仝闖
  * @Create: 2018/8/27 0027 上午 11:58
  */

@@ -3,6 +3,10 @@ package com.tong.blog.n01;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @Description: 博客地址：https://coolshell.cn/articles/1051.html
+ * @Create: 2019/1/22 0022 上午 9:28
+ */
 public class ColoredPoint extends Point {
 
     private final Color color;

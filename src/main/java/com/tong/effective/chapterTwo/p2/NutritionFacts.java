@@ -1,5 +1,7 @@
 package com.tong.effective.chapterTwo.p2;
 
+import java.util.EnumSet;
+
 /**
  * @Description: telescoping construcor pattern
  * @Author: 仝闖
