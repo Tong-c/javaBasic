@@ -1,16 +1,16 @@
 package com.tong.logic.chapterFifteen.cooperation;
 
- /**
-   * @Description:    集合點協作示例
-   * @Author:     仝闖    
-   * @Create:     2018/8/2 0002 下午 5:45
-   */
+/**
+ * @Description: 集合點協作示例
+ * @Author: 仝闖
+ * @Create: 2018/8/2 0002 下午 5:45
+ */
 public class AssemblePointDemo {
 
-    static class Tourist extends Thread{
+    static class Tourist extends Thread {
         AssemblePoint ap;
 
-        public Tourist(AssemblePoint ap){
+        public Tourist(AssemblePoint ap) {
             this.ap = ap;
         }
 
@@ -26,14 +26,14 @@ public class AssemblePointDemo {
         }
     }
 
-     public static void main(String[] args) {
-         int num = 10;
-         Tourist[] threads = new Tourist[num];
-         AssemblePoint ap = new AssemblePoint(num);
-         for(int i = 0;i < num ; i++){
-             threads[i] = new Tourist(ap);
-             threads[i].start();
-         }
+    public static void main(String[] args) {
+        int num = 10;
+        Tourist[] threads = new Tourist[num];
+        AssemblePoint ap = new AssemblePoint(num);
+        for (int i = 0; i < num; i++) {
+            threads[i] = new Tourist(ap);
+            threads[i].start();
+        }
 
-     }
+    }
 }

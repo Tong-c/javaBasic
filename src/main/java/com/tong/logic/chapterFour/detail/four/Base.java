@@ -12,16 +12,16 @@ public class Base {
         System.out.println("基類實例代碼塊，a:" + a);
     }
 
-    public Base(){
+    public Base() {
         System.out.println("基類構造方法：a" + a);
         a = 2;
     }
 
-    protected void step(){
+    protected void step() {
         System.out.println("base s: " + s + ",a:" + a);
     }
 
-    public void action(){
+    public void action() {
         System.out.println("start");
         step();
         System.out.println("end");

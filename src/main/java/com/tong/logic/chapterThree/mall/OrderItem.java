@@ -26,7 +26,7 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public double computePrice(){
-        return product.getPrice()*quantity;
+    public double computePrice() {
+        return product.getPrice() * quantity;
     }
 }

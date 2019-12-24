@@ -5,6 +5,6 @@ import java.util.Arrays;
 import java.util.Date;
 
 public enum BasicSize {
-    SMALL,MEDIUM,LARGE
+    SMALL, MEDIUM, LARGE
 
 }

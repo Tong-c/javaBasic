@@ -13,39 +13,39 @@ import java.util.Locale;
 public class DateTest {
 
     public static void main(String[] args) {
-       testStringToDate();
+        testStringToDate();
     }
 
 
-    public static void testDateFormat(){
+    public static void testDateFormat() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2016,07,15,14,15,20);
+        calendar.set(2016, 07, 15, 14, 15, 20);
         System.out.println(DateFormat.getDateTimeInstance().format(calendar.getTime()));
         System.out.println(DateFormat.getDateInstance().format(calendar.getTime()));
         System.out.println(DateFormat.getTimeInstance().format(calendar.getTime()));
     }
 
-    public static void testDateFormatWithStyle(){
+    public static void testDateFormatWithStyle() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2016,07,15,14,15,20);
-        System.out.println(DateFormat.getDateTimeInstance(DateFormat.LONG,DateFormat.SHORT, Locale.CHINESE).format(calendar.getTime()));
+        calendar.set(2016, 07, 15, 14, 15, 20);
+        System.out.println(DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT, Locale.CHINESE).format(calendar.getTime()));
     }
 
-    public static void testSimpleDateFormat(){
+    public static void testSimpleDateFormat() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2016,07,15,14,15,20);
+        calendar.set(2016, 07, 15, 14, 15, 20);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 E HH時mm分ss秒");//E表示星期幾，HH表示24小時制
         System.out.println(sdf.format(calendar.getTime()));
     }
 
-    public static void testSimpleDateFormatDetail(){
+    public static void testSimpleDateFormatDetail() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2016,07,15,14,15,20);
+        calendar.set(2016, 07, 15, 14, 15, 20);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss a");//hh表示12小時制，a表示上午或下午
         System.out.println(sdf.format(calendar.getTime()));
     }
 
-    public static void testStringToDate(){
+    public static void testStringToDate() {
         String str = "2016-08-15 14:15:20.456";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         try {

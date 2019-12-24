@@ -1,20 +1,20 @@
 package com.tong.logic.chapterFifteen.csynchronized;
 
- /**
-   * @Description:    死鎖示例
-   * @Author:     仝闖    
-   * @Create:     2018/7/31 0031 下午 5:28
-   */
+/**
+ * @Description: 死鎖示例
+ * @Author: 仝闖
+ * @Create: 2018/7/31 0031 下午 5:28
+ */
 public class DeadLockDemo {
 
     private static Object lockA = new Object();
     private static Object lockB = new Object();
 
-    private static void startThreadA(){
-        Thread aThread = new Thread(){
+    private static void startThreadA() {
+        Thread aThread = new Thread() {
             @Override
             public void run() {
-                synchronized (lockA){
+                synchronized (lockA) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -22,7 +22,7 @@ public class DeadLockDemo {
                     }
                 }
 
-                synchronized (lockB){
+                synchronized (lockB) {
 
                 }
             }
@@ -32,11 +32,11 @@ public class DeadLockDemo {
     }
 
 
-    private static void startThreadB(){
-        Thread bThread = new Thread(){
+    private static void startThreadB() {
+        Thread bThread = new Thread() {
             @Override
             public void run() {
-                synchronized (lockB){
+                synchronized (lockB) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -44,7 +44,7 @@ public class DeadLockDemo {
                     }
                 }
 
-                synchronized (lockA){
+                synchronized (lockA) {
 
                 }
             }
@@ -54,8 +54,8 @@ public class DeadLockDemo {
 
     }
 
-     public static void main(String[] args) {
-         startThreadA();
-         startThreadB();
-     }
+    public static void main(String[] args) {
+        startThreadA();
+        startThreadB();
+    }
 }

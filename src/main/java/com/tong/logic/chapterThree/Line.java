@@ -9,7 +9,7 @@ public class Line {
         this.end = end;
     }
 
-    public double length(){
+    public double length() {
         return start.distance(end);
     }
 }

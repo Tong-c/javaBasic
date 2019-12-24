@@ -22,5 +22,4 @@ public class Detergent extends Cleanser {
     }
 
 
-
 }

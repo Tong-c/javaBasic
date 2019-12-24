@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class OuterThree {
     private int a = 100;
 
-    public void test(final int param){
+    public void test(final int param) {
         final String str = "hello";
-        class Inner{
-            public void innerMethod(){
+        class Inner {
+            public void innerMethod() {
                 System.out.println("outer a " + a);
                 System.out.println(" param " + param);
                 System.out.println("local var " + str);

@@ -5,11 +5,11 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.util.concurrent.Callable;
 
- /**
-   * @Description:    執行子綫程ExecuteThread
-   * @Author:     仝闖    
-   * @Create:     2018/8/1 0001 下午 6:17
-   */
+/**
+ * @Description: 執行子綫程ExecuteThread
+ * @Author: 仝闖
+ * @Create: 2018/8/1 0001 下午 6:17
+ */
 public class ExecuteThread<V> extends Thread {
 
     private V result = null;
@@ -18,7 +18,7 @@ public class ExecuteThread<V> extends Thread {
     private Callable<V> task;
     private Object lock;
 
-    public ExecuteThread(Callable<V> task, Object lock){
+    public ExecuteThread(Callable<V> task, Object lock) {
         this.task = task;
         this.lock = lock;
     }
@@ -29,15 +29,15 @@ public class ExecuteThread<V> extends Thread {
             result = task.call();
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            synchronized (lock){
+        } finally {
+            synchronized (lock) {
                 done = true;
                 lock.notifyAll();
             }
         }
     }
 
-    public V getResult(){
+    public V getResult() {
         return result;
     }
 
@@ -45,7 +45,7 @@ public class ExecuteThread<V> extends Thread {
         return done;
     }
 
-    public Exception getException(){
+    public Exception getException() {
         return exception;
     }
 }

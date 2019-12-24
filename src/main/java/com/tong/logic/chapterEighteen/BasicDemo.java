@@ -4,10 +4,10 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 /**
-   * @Description:    任務執行服務的基本示例
-   * @Author:     仝闖
-   * @Create:     2018/8/7 0007 下午 5:44
-   */
+ * @Description: 任務執行服務的基本示例
+ * @Author: 仝闖
+ * @Create: 2018/8/7 0007 下午 5:44
+ */
 public class BasicDemo {
 
     static class Task implements Callable<Integer> {

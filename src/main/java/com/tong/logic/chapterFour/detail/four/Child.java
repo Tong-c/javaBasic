@@ -4,6 +4,7 @@ public class Child extends Base {
 
     public static int s;
     private int a;
+
     static {
         System.out.println("子類靜態代碼塊，s:" + s);
         s = 10;
@@ -14,15 +15,14 @@ public class Child extends Base {
         a = 10;
     }
 
-    public Child(){
+    public Child() {
         System.out.println("子類構造方法，a:" + a);
         a = 20;
     }
 
-    protected void step(){
+    protected void step() {
         System.out.println("child s:" + s + ",a :" + a);
     }
-
 
 
 }

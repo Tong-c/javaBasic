@@ -1,18 +1,18 @@
 package com.tong.logic.chapterFifteen;
 
- /**
-   * @Description:    內存可見性示例
-   * @Author:     仝闖
-   * @Create:     2018/7/26 0026 下午 6:24
-   */
+/**
+ * @Description: 內存可見性示例
+ * @Author: 仝闖
+ * @Create: 2018/7/26 0026 下午 6:24
+ */
 public class VisibilityDemo {
 
     private static boolean shutdown = false;
 
-    static class HelloThread extends Thread{
+    static class HelloThread extends Thread {
         @Override
         public void run() {
-            while (!shutdown){
+            while (!shutdown) {
 
             }
             System.out.println("exit hello");

@@ -1,6 +1,6 @@
 package com.tong.logic.chapterFifteen;
 
-public class HelloThread extends Thread{
+public class HelloThread extends Thread {
 
     @Override
     public void run() {

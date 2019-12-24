@@ -18,8 +18,8 @@ public class Circle extends Shape {
         System.out.println("draw circle at " + center.toString() + " with r " + r + ",using color :" + getColor());
     }
 
-    public double area(){
-        return Math.PI*r*r;
+    public double area() {
+        return Math.PI * r * r;
     }
 
 

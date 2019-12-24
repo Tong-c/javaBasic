@@ -7,7 +7,7 @@ public class Triangle extends Shape {
         System.out.println("Drawing Triangle");
     }
 
-    void dispose(){
+    void dispose() {
         System.out.println("Erasing Triangle");
         super.dispose();
     }

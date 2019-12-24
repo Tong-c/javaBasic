@@ -7,14 +7,14 @@ public class ShapeManager {
     private Shape[] shapes = new Shape[MAX_NUM];
     private int shapeNum = 0;
 
-    public void addShape(Shape shape){
-        if(shapeNum<MAX_NUM){
+    public void addShape(Shape shape) {
+        if (shapeNum < MAX_NUM) {
             shapes[shapeNum++] = shape;
         }
     }
 
-    public void draw(){
-        for(int i = 0;i<shapeNum;i++){
+    public void draw() {
+        for (int i = 0; i < shapeNum; i++) {
             shapes[i].draw();
         }
     }

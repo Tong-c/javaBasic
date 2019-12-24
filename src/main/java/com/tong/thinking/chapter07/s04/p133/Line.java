@@ -2,6 +2,7 @@ package com.tong.thinking.chapter07.s04.p133;
 
 public class Line extends Shape {
     private int start, end;
+
     Line(int start, int end) {
         super(start);
         this.start = start;

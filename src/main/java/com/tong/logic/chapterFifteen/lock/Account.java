@@ -4,33 +4,34 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
-   * @Description:    賬戶類
-   * @Author:     仝闖    
-   * @Create:     2018/8/3 0003 下午 5:40
-   */
+ * @Description: 賬戶類
+ * @Author: 仝闖
+ * @Create: 2018/8/3 0003 下午 5:40
+ */
 public class Account {
 
     private Lock lock = new ReentrantLock();
     private volatile double money;
-    public Account(double initialMoney){
+
+    public Account(double initialMoney) {
         this.money = initialMoney;
     }
 
-    public void add(double money){
+    public void add(double money) {
         lock.lock();
 
         try {
             this.money += money;
-        }finally {
+        } finally {
             lock.unlock();
         }
     }
 
-    public void reduce(double money){
+    public void reduce(double money) {
         lock.lock();
-        try{
+        try {
             this.money -= money;
-        }finally {
+        } finally {
             lock.unlock();
         }
     }
@@ -39,15 +40,15 @@ public class Account {
         return money;
     }
 
-    void lock(){
+    void lock() {
         lock.lock();
     }
 
-    void unlock(){
+    void unlock() {
         lock.unlock();
     }
 
-    boolean tryLock(){
+    boolean tryLock() {
         return lock.tryLock();
     }
 }

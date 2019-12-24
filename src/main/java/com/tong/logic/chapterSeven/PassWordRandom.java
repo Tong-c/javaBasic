@@ -9,10 +9,10 @@ public class PassWordRandom {
 
     private static final String SPECIAL_CHARS = "!@#$%^&*_=+/";
 
-    public static char nextChar(Random rnd){
-        switch (rnd.nextInt(4)){
+    public static char nextChar(Random rnd) {
+        switch (rnd.nextInt(4)) {
             case 0:
-                return (char) ('a' + rnd.nextInt(26 ));
+                return (char) ('a' + rnd.nextInt(26));
             case 1:
                 return (char) ('A' + rnd.nextInt(26));
             case 2:
@@ -23,10 +23,10 @@ public class PassWordRandom {
     }
 
 
-    public static String randomPassword(){
+    public static String randomPassword() {
         char[] chars = new char[8];
         Random rnd = new Random();
-        for(int i = 0;i < 8;i++){
+        for (int i = 0; i < 8; i++) {
             chars[i] = nextChar(rnd);
         }
         return new String(chars);

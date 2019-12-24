@@ -6,20 +6,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
-   * @Description:    ThreadLocal日期處理
-   * @Author:     仝闖    
-   * @Create:     2018/8/9 0009 下午 6:01
-   */
+ * @Description: ThreadLocal日期處理
+ * @Author: 仝闖
+ * @Create: 2018/8/9 0009 下午 6:01
+ */
 public class ThreadLocalFormat {
 
-    static ThreadLocal<DateFormat> sdf = new ThreadLocal<DateFormat>(){
+    static ThreadLocal<DateFormat> sdf = new ThreadLocal<DateFormat>() {
         @Override
         protected DateFormat initialValue() {
             return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         }
     };
 
-    public static String date2String(Date date){
+    public static String date2String(Date date) {
         return sdf.get().format(date);
     }
 

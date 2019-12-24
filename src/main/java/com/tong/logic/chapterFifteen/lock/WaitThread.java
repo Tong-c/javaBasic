@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class WaitThread extends Thread{
+public class WaitThread extends Thread {
 
     private volatile boolean fire = false;
     private Lock lock = new ReentrantLock();
@@ -15,24 +15,24 @@ public class WaitThread extends Thread{
         try {
             lock.lock();
             try {
-               while (!fire){
-                   condition.await();
-               }
-            }finally {
+                while (!fire) {
+                    condition.await();
+                }
+            } finally {
                 lock.unlock();
             }
             System.out.println("fired");
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             Thread.interrupted();
         }
     }
 
-    public void fire(){
+    public void fire() {
         lock.lock();
         try {
             this.fire = true;
             condition.signal();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

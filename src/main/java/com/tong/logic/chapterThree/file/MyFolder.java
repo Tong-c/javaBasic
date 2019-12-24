@@ -50,18 +50,18 @@ public class MyFolder {
         this.subFolder = subFolder;
     }
 
-    public int totalSize(){
+    public int totalSize() {
 
         int totalSize = 0;
 
-        if(files != null){
-            for(MyFile file:files){
-                totalSize+=file.getSize();
+        if (files != null) {
+            for (MyFile file : files) {
+                totalSize += file.getSize();
             }
         }
 
-        if(subFolder != null){
-            for(MyFolder folder:subFolder){
+        if (subFolder != null) {
+            for (MyFolder folder : subFolder) {
                 totalSize += folder.totalSize();
             }
         }

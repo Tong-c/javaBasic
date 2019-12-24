@@ -8,7 +8,7 @@ public class CADSystem extends Shape {
     public CADSystem(int i) {
         super(i + 1);
         for (int j = 0; j < lines.length; j++) {
-            lines[j] = new Line(j, j*j);
+            lines[j] = new Line(j, j * j);
         }
         c = new Circle(1);
         t = new Triangle(1);

@@ -4,23 +4,23 @@ public class Shape {
     private static final String DEFAULT_COLOR = "balck";
     private String color;
 
-    public Shape(){
+    public Shape() {
         this(DEFAULT_COLOR);
     }
 
-    public Shape(String color){
+    public Shape(String color) {
         this.color = color;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
-    public void setColor(String color){
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public void draw(){
+    public void draw() {
         System.out.println("draw shape");
     }
 }

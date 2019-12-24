@@ -12,7 +12,7 @@ public class WeightRandom {
     private double[] cumulativeProbabilities;
     private Random rnd;
 
-    public WeightRandom(Pair[] options){
+    public WeightRandom(Pair[] options) {
         this.options = options;
         this.rnd = new Random();
         prepare();
@@ -20,23 +20,23 @@ public class WeightRandom {
 
     private void prepare() {
         int weights = 0;
-        for(Pair pair:options){
-            weights+=pair.getWeight();
+        for (Pair pair : options) {
+            weights += pair.getWeight();
         }
 
         cumulativeProbabilities = new double[options.length];
         int sum = 0;
-        for(int i = 0;i < options.length;i++){
-            sum+=options[i].getWeight();
-            cumulativeProbabilities[i] = sum / (double)weights;
+        for (int i = 0; i < options.length; i++) {
+            sum += options[i].getWeight();
+            cumulativeProbabilities[i] = sum / (double) weights;
         }
 
     }
 
-    public Object nextItem(){
+    public Object nextItem() {
         double randomValue = rnd.nextDouble();
-        int index = Arrays.binarySearch(cumulativeProbabilities,randomValue);
-        if(index < 0){
+        int index = Arrays.binarySearch(cumulativeProbabilities, randomValue);
+        if (index < 0) {
             index = -index - 1;
         }
         return options[index].getItem();

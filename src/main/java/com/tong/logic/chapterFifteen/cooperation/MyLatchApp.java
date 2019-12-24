@@ -5,7 +5,7 @@ public class MyLatchApp {
         int workerNum = 10;
         MyLatch latch = new MyLatch(workerNum);
         Worker[] workers = new Worker[workerNum];
-        for(int i = 0; i < workerNum; i++){
+        for (int i = 0; i < workerNum; i++) {
             workers[i] = new Worker(latch);
             workers[i].start();
         }

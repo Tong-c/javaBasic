@@ -9,55 +9,54 @@ public class DynamicArray<E> {
     private int size;
     private Object[] elmentData;
 
-    public DynamicArray(){
+    public DynamicArray() {
         this.elmentData = new Object[DEFAULT_CAPACITY];
     }
 
-    private void ensureCapacity(int minCapacity){
+    private void ensureCapacity(int minCapacity) {
         int oldCapacity = elmentData.length;
-        if(oldCapacity > minCapacity){
+        if (oldCapacity > minCapacity) {
             return;
         }
 
         int newCapacity = oldCapacity * 2;
-        if(newCapacity < minCapacity){
+        if (newCapacity < minCapacity) {
             newCapacity = minCapacity;
         }
-        elmentData = Arrays.copyOf(elmentData,newCapacity);
+        elmentData = Arrays.copyOf(elmentData, newCapacity);
     }
 
-    public void add(E e){
+    public void add(E e) {
         ensureCapacity(size + 1);
         elmentData[size++] = e;
     }
 
-    public E get(int index){
+    public E get(int index) {
         return (E) elmentData[index];
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 
-    public E set(int index,E element){
+    public E set(int index, E element) {
         E oldValue = get(index);
         elmentData[index] = element;
         return oldValue;
     }
 
 
-    public <T extends E> void addAll(DynamicArray<T> c){
-        for(int i = 0;i<size;i++){
+    public <T extends E> void addAll(DynamicArray<T> c) {
+        for (int i = 0; i < size; i++) {
             add(c.get(i));
         }
     }
 
-    public void copyTo(DynamicArray<? super E> desc){
-        for(int i = 0;i < size;i++){
+    public void copyTo(DynamicArray<? super E> desc) {
+        for (int i = 0; i < size; i++) {
             desc.add(get(i));
         }
     }
-
 
 
 }

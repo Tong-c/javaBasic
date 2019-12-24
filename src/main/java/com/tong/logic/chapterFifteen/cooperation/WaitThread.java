@@ -22,7 +22,7 @@ public class WaitThread extends Thread {
         }
     }
 
-    public synchronized void fire(){
+    public synchronized void fire() {
         this.fire = true;
         notify();
     }

@@ -7,22 +7,22 @@ public class Line extends Shape {
     private Point start;
     private Point end;
 
-    public Line(Point start,Point end,String color){
+    public Line(Point start, Point end, String color) {
         super(color);
         this.start = start;
         this.end = end;
 
     }
 
-    public double length(){
+    public double length() {
         return start.distance(end);
     }
 
-    public Point getStart(){
+    public Point getStart() {
         return start;
     }
 
-    public Point getEnd(){
+    public Point getEnd() {
         return end;
     }
 

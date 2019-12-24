@@ -6,7 +6,7 @@ public class FireFlagApp {
         int num = 10;
         FireFlag fireFlag = new FireFlag();
         Thread[] racers = new Thread[num];
-        for(int i = 0;i < num;i++){
+        for (int i = 0; i < num; i++) {
             racers[i] = new Racer(fireFlag);
             racers[i].start();
         }

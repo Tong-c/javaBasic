@@ -3,21 +3,23 @@ package com.tong.logic.chapterFifteen;
 import java.util.ArrayList;
 import java.util.List;
 
- /**
-   * @Description:    共享內存實例
-   * @Author:     仝闖
-   * @Create:     2018/7/26 0026 下午 6:13
-   */
+/**
+ * @Description: 共享內存實例
+ * @Author: 仝闖
+ * @Create: 2018/7/26 0026 下午 6:13
+ */
 public class ShareMemoryDemo {
 
     private static int shared = 0;
-    private static void incrShared(){
+
+    private static void incrShared() {
         shared++;
     }
 
-    static class ChildThread extends Thread{
+    static class ChildThread extends Thread {
         List<String> list;
-        public ChildThread(List<String> list){
+
+        public ChildThread(List<String> list) {
             this.list = list;
         }
 

@@ -2,25 +2,25 @@ package com.tong.logic.chapterEight;
 
 import com.sun.org.apache.regexp.internal.RE;
 
-public class NumberPair<U extends Number,V extends Number> {
+public class NumberPair<U extends Number, V extends Number> {
 
     private U first;
     private V second;
 
-    public NumberPair(U first,V second){
+    public NumberPair(U first, V second) {
         this.first = first;
         this.second = second;
     }
 
-    public double sum(){
+    public double sum() {
         return getFirst().doubleValue() + getSecond().doubleValue();
     }
 
-    public U getFirst(){
+    public U getFirst() {
         return first;
     }
 
-    public V getSecond(){
+    public V getSecond() {
         return second;
     }
 }

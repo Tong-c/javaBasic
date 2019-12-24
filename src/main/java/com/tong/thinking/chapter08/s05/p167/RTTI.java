@@ -6,6 +6,6 @@ public class RTTI {
         x[0].f();
         x[1].g();
 //        x[1].u();
-        ((MoreUseful)x[1]).u();//向下轉型，運行時類型識別
+        ((MoreUseful) x[1]).u();//向下轉型，運行時類型識別
     }
 }

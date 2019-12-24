@@ -78,10 +78,10 @@ public class Order {
         this.status = status;
     }
 
-    public double computeTotalPrice(){
+    public double computeTotalPrice() {
         double totalPrice = 0;
-        if(items != null){
-            for(OrderItem item:items){
+        if (items != null) {
+            for (OrderItem item : items) {
                 totalPrice += item.computePrice();
             }
         }

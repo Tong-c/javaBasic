@@ -7,7 +7,7 @@ public class Person {
     private Person mother;
     private Person[] children;
 
-    public Person(String name){
+    public Person(String name) {
         this.name = name;
     }
 

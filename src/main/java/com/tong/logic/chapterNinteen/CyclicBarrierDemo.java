@@ -42,7 +42,7 @@ public class CyclicBarrierDemo {
                 System.out.println(" all arrived " + System.currentTimeMillis() + " executed by " + Thread.currentThread().getName());
             }
         });
-        for(int i = 0 ;i < num ; i++){
+        for (int i = 0; i < num; i++) {
             threads[i] = new Tourist(barrier);
             threads[i].start();
         }

@@ -7,8 +7,8 @@ public class ArrowLine extends Line {
     private boolean startArrow;
     private boolean endArrow;
 
-    public ArrowLine(Point start,Point end,String color,boolean startArrow, boolean endArrow) {
-        super(start,end,color);
+    public ArrowLine(Point start, Point end, String color, boolean startArrow, boolean endArrow) {
+        super(start, end, color);
         this.startArrow = startArrow;
         this.endArrow = endArrow;
     }
@@ -16,14 +16,13 @@ public class ArrowLine extends Line {
     @Override
     public void draw() {
         super.draw();
-        if(startArrow){
+        if (startArrow) {
             System.out.println("draw start arrow");
         }
-        if(endArrow){
+        if (endArrow) {
             System.out.println("draw end arrow");
         }
     }
-
 
 
 }

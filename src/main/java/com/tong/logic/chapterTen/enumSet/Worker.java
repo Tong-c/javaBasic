@@ -6,7 +6,7 @@ public class Worker {
     String name;
     Set<Day> availableDays;
 
-    public Worker(String name,Set<Day> availableDays){
+    public Worker(String name, Set<Day> availableDays) {
         this.name = name;
         this.availableDays = availableDays;
     }
