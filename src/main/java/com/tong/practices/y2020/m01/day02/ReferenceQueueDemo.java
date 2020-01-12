@@ -4,6 +4,7 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 
 public class ReferenceQueueDemo {
+
     public static void main(String[] args) {
         Object o1 = new Object();
         ReferenceQueue<Object> referenceQueue = new ReferenceQueue();
@@ -20,4 +21,5 @@ public class ReferenceQueueDemo {
         System.out.println(weakReference.get());
         System.out.println(referenceQueue.poll());
     }
+
 }
