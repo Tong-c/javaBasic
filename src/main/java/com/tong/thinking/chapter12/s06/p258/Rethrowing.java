@@ -14,4 +14,30 @@ public class Rethrowing {
             System.out.println("Inside g().e.printStackTrace()");
         }
     }
+
+    public static void h() {
+        try {
+            f();
+        } catch (Exception e) {
+            System.out.println("main: printStackTrace()");
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        try {
+            g();
+        } catch (Exception e) {
+            System.out.println("main: printStackTrace()");
+            e.printStackTrace(System.out);
+        }
+
+        try {
+            h();
+        } catch (Exception e) {
+            System.out.println("main: printStackTrace()");
+            e.printStackTrace(System.out);
+        }
+    }
 }
