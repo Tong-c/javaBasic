@@ -1,6 +1,5 @@
 package com.tong.thinking.chapter15.s10;
 
-import com.sun.tools.corba.se.idl.constExpr.Or;
 
 public class CovariantArrays {
     public static void main(String[] args) {
