@@ -1,6 +1,5 @@
 package com.tong.thinking.chapter19.s01.p592;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 public enum OzWitch {
     WEST("Miss Gulch, aka the Wicked Witch of the West"),

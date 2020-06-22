@@ -2,6 +2,7 @@ package com.tong.thinking.chapter19.s02.p592;
 
 public enum SpaceShip {
     SCOUT, CARGO, TRANSPORT, CRUISER, BATTLESHIP, MONTHSHIP;
+
     public String toString() {
         String id = name();
         String lower = id.substring(1).toLowerCase();
