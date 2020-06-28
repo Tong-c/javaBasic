@@ -5,7 +5,7 @@ import com.tong.thinking.chapter19.s07.p597.Food;
 
 public enum Course {
 
-    APPETIZER(Food.Dessert.class);
+    APPETIZER(Food.Dessert.class), MAINCOURSE(Food.MainCourse.class), DESSERT(Food.Dessert.class), COFFEE(Food.COFFEE.class);
 
     private Food[] values;
 
