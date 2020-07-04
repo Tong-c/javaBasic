@@ -7,4 +7,19 @@ public class Rock implements Item {
         return null;
     }
 
+    @Override
+    public Outcome eval(Paper p) {
+        return null;
+    }
+
+    @Override
+    public Outcome eval(Scissors s) {
+        return null;
+    }
+
+    @Override
+    public Outcome eval(Rock r) {
+        return null;
+    }
+
 }
