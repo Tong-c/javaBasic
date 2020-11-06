@@ -1,6 +1,7 @@
 package com.tong.effective.chapterSix.p34;
 
 public enum BasicOperation implements Operation {
+
     PLUS("+") {
         @Override
         public double apply(double x, double y) {

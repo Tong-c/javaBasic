@@ -5,7 +5,9 @@ package com.tong.effective.chapterSix.p30;
  * @Create: 2019/2/20 0020 上午 10:17
  */
 public enum PayrollDay {
+
     MONDAY(PayType.WEEKDAY), TUESDAY(PayType.WEEKDAY), WEDNESDAY(PayType.WEEKDAY), THURSDAY(PayType.WEEKDAY), FRIDAY(PayType.WEEKDAY), SATURDAY(PayType.WEEKEND), SUNDAY(PayType.WEEKEND);
+
     private final PayType payType;
 
     PayrollDay(PayType payType) {
